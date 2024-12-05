@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Economist Style News</title>
+    
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=' + i;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        /* Additional CSS removed for brevity */
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="logo">
+            <h1>The Economist</h1>
+        </div>
+        <nav>
+            <a href="#"><span style="font-size: 1.2rem;">☰</span> Menu</a>
+            <div class="divider"></div>
+            <a href="#">Weekly edition</a>
+            <div class="divider"></div>
+            <a href="#">The world in brief</a>
+            <div class="divider"></div>
+            <a href="#"><span style="font-size: 1.2rem;">🔍</span> Search</a>
+        </nav>
+        <div class="cta-buttons">
+            <button>Try for free</button>
+            <a href="#">Log in</a>
+        </div>
+    </header>
+
+    <!-- Sub-header Section -->
+    <div class="sub-header">
+        <!-- Sub-header content removed for brevity -->
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Content Sections removed for brevity -->
+    </div>
+</body>
+</html>
