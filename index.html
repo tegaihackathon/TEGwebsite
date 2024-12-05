@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Economist Style News</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .logo {
+            background-color: #d71920;
+            padding: 10px 20px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: space-evenly;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav .divider {
+            height: 20px;
+            border-left: 1px solid #ccc;
+            margin: 0 15px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .cta-buttons button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 15px;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .cta-buttons button:hover {
+            background-color: #002244;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Sub-header Section */
+        .sub-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sub-header-item {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .sub-header-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .sub-header-item h3 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .sub-header-item p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .divider {
+            height: 40px;
+            border-left: 1px solid #ccc;
+            margin: 0 15px;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .main-content .left-image {
+            flex: 4; /* 40% width */
+            margin-right: 20px;
+        }
+
+        .main-content .left-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .main-content .left-image h3 {
+            font-size: 1.5rem; /* Increased font size */
+            margin: 15px 0 10px;
+        }
+
+        .main-content .left-image p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .main-content .left-image a {
+            color: #0041a3;
+            text-decoration: underline;
+        }
+
+        .main-content .left-image a:hover {
+            text-decoration: none;
+        }
+
+        .main-content .leaders {
+            flex: 2; /* 20% width */
+            margin-right: 20px;
+        }
+
+        .main-content .leaders .subsection {
+            margin-bottom: 30px;
+        }
+
+        .main-content .leaders .subsection h3 {
+            color: #d71920;
+            font-size: 1rem;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .main-content .leaders .subsection h4 {
+            font-size: 1.1rem;
+            margin: 0 0 10px;
+            color: #0041a3;
+            text-decoration: underline;
+        }
+
+        .main-content .leaders .subsection h4 a {
+            text-decoration: none;
+            color: #0041a3;
+        }
+
+        .main-content .leaders .subsection h4 a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content .leaders .subsection p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .main-content .leaders .subsection p a {
+            color: #0041a3;
+            text-decoration: underline;
+        }
+
+        .main-content .leaders .subsection p a:hover {
+            text-decoration: none;
+        }
+
+        .main-content .world-in-brief {
+            flex: 2; /* 20% width */
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: "Georgia", serif;
+        }
+
+        .main-content .world-in-brief h2 {
+            color: #d71920;
+            font-size: 1.2rem;
+            margin: 0 0 15px;
+            border-left: 4px solid #d71920;
+            padding-left: 10px;
+        }
+
+        .main-content .world-in-brief p {
+            font-size: 0.9rem;
+            margin: 15px 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .main-content .world-in-brief p a {
+            color: #0041a3;
+            text-decoration: underline;
+        }
+
+        .main-content .world-in-brief p a:hover {
+            text-decoration: none;
+        }
+
+        .main-content .world-in-brief .continue-button {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 10px 15px;
+            border: 1px solid black;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        .main-content .world-in-brief .continue-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>The Economist</h1>
+        </div>
+        <nav>
+            <a href="#"><span style="font-size: 1.2rem;">☰</span> Menu</a>
+            <div class="divider"></div>
+            <a href="#">Weekly edition</a>
+            <div class="divider"></div>
+            <a href="#">The world in brief</a>
+            <div class="divider"></div>
+            <a href="#"><span style="font-size: 1.2rem;">🔍</span> Search</a>
+        </nav>
+        <div class="cta-buttons">
+            <button>Try for free</button>
+            <a href="#">Log in</a>
+        </div>
+    </header>
+
+    <!-- Sub-header -->
+    <div class="sub-header">
+        <div class="sub-header-item">
+            <img src="images/light_bulb.png" alt="The Intelligence">
+            <div>
+                <h3>The Intelligence</h3>
+                <p><a href="https://en.wikipedia.org/wiki/South_Korea">South Korea’s</a> martial-law flip-flop bodes ill for the region</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="sub-header-item">
+            <img src="images/calendar.png" alt="Dateline">
+            <div>
+                <h3>Dateline</h3>
+                <p><a href="https://en.wikipedia.org/wiki/The_Economist">The Economist</a> published extracts guessing historical years</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="sub-header-item">
+            <img src="images/globe.png" alt="Middle East Dispatch">
+            <div>
+                <h3>Middle East Dispatch</h3>
+                <p>Insights into <a href="https://en.wikipedia.org/wiki/Middle_East">Middle East</a> affairs and politics</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Left Section -->
+        <div class="left-image">
+            <img src="images/large_image.jpg" alt="Main Story">
+            <h3><a href="https://en.wikipedia.org/wiki/France">France’s parliament fires the prime minister</a></h3>
+            <p>The country now has no budget and no government.</p>
+        </div>
+
+        <!-- Middle Section: Leaders -->
+        <div class="leaders">
+            <div class="subsection">
+                <img src="images/leaders_image.jpg" alt="Leaders Story">
+                <h3>Leaders</h3>
+                <h4><a href="https://en.wikipedia.org/wiki/Yoon_Suk-yeol" target="_blank">Yoon Suk Yeol of South Korea should resign, or be impeached</a></h4>
+                <p>His coup attempt was foiled. But grave tests still remain for the country.</p>
+            </div>
+            <div class="subsection">
+                <h3>United States</h3>
+                <h4><a href="https://en.wikipedia.org/wiki/Pete_Hegseth" target="_blank">Would you put Pete Hegseth in the nuclear chain-of-command?</a></h4>
+                <p>A steady stream of scandal may capsize another of Donald Trump's nominees.</p>
+            </div>
+        </div>
+
+        <!-- Right Section: The World in Brief -->
+        <div class="world-in-brief">
+            <h2>The world in brief</h2>
+            <p><a href="https://en.wikipedia.org/wiki/France"><strong>France’s</strong></a> minority government collapsed after <strong><a href="https://en.wikipedia.org/wiki/Michel_Barnier">Michel Barnier</a></strong>, the prime minister, lost a vote of no confidence...</p>
+            <p><strong><a href="https://en.wikipedia.org/wiki/Yoon_Suk-yeol">Kim Yong-hyun</a>, South Korea’s</strong> defence minister, resigned over his role in the short-lived coup attempt by Yoon Suk Yeol, the president...</p>
+            <p>The value of <strong><a href="https://en.wikipedia.org/wiki/Bitcoin">bitcoin</a></strong> surged above $100,000 for the first time...</p>
+            <p><strong><a href="https://en.wikipedia.org/wiki/Mexico">Mexican</a></strong> authorities said they had seized more than a tonne of fentanyl this week...</p>
+            <a href="#" class="continue-button">Continue reading →</a>
+        </div>
+    </div>
+</body>
+</html>
