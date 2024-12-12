@@ -355,8 +355,8 @@
         </div>
     </div>
 <div>
-            <h2>Contact Form</h2>
-    <form action="/submit_form" method="POST">
+    <h2>Contact Form</h2>
+    <form id="contactForm"> <!-- Add the id here -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
         
@@ -369,12 +369,13 @@
         <input type="submit" value="Submit">
     </form>
 </div>
- <script>
+<script>
     // Add an event listener to the form for handling submission
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
         window.location.href = 'success.html'; // Redirect to the success page
     });
 </script>
+
 </body>
 </html>
